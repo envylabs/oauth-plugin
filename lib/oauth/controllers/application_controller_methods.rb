@@ -73,7 +73,6 @@ module OAuth
         end
 
         def oauth20_token
-          return false unless defined?(Oauth2Token)
           token, options = token_and_options
           token ||= params[:oauth_token] || params[:access_token]
           if !token.blank?
